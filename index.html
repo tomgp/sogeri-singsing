@@ -5,8 +5,7 @@
 	<style>
 
 		div.heading{
-			padding-right: 10px;
-			padding-left: 10px;
+			padding-right:20px;
 		}
 
 		h1, h2{
@@ -33,13 +32,36 @@
 		}
 
 		img.page{
+			margin: 0px;
 			height: 175px;
-			padding: 10px;
+			padding-bottom: 20px;
+			padding-right: 20px;
+		}
+
+		.clickable{
+			cursor: pointer;
 		}
 
 	</style>
 	<script>
-		function imgLoaded(node){ console.log(node); }
+
+		window.onload = function(){
+			var pages = document.getElementsByClassName('page');
+			console.log( typeof pages );
+
+			for (i = 0; i < pages.length; i++) {
+				pages[i].onclick = function(){console.log('FFF!')};
+				pages[i].setAttribute('class', 'page clickable');
+			}
+
+			// pages.each(function(p){
+			// 	console.log(p);
+			// 	// p.onclick = function(){
+			// 	// 	console.log('hello');
+			// 	// }
+			// });
+		};
+
 	</script>
 </head>
 <body>
@@ -49,34 +71,34 @@
 			<h1>Sogeri Singsing</h1>
 			<h2>July 1987</h2>
 		</div>
-		<img class="page" src="pictures/00a-front-cover.jpeg" onload="imgLoaded(this)">
-		<img src="pictures/00b-front-cover-inside.jpeg" class="page" onload="imgLoaded(this)">
-		<img src="pictures/01.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/02.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/03.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/04.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/05.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/06.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/07.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/08.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/09.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/10.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/11.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/12.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/13.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/14.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/15.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/16.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/17.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/18.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/19.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/20.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/21.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/22.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/23.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/24.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/25.jpeg" alt="" class="page" onload="imgLoaded(this)">
-		<img src="pictures/26.jpeg" alt="" class="page" onload="imgLoaded(this)">
+		<img src="pictures/00a-front-cover.jpeg" class="page" >
+		<img src="pictures/00b-front-cover-inside.jpeg" class="page" >
+		<img src="pictures/01.jpeg" class="page" >
+		<img src="pictures/02.jpeg" class="page" >
+		<img src="pictures/03.jpeg" class="page" >
+		<img src="pictures/04.jpeg" class="page" >
+		<img src="pictures/05.jpeg" class="page" >
+		<img src="pictures/06.jpeg" class="page" >
+		<img src="pictures/07.jpeg" class="page" >
+		<img src="pictures/08.jpeg" class="page" >
+		<img src="pictures/09.jpeg" class="page" >
+		<img src="pictures/10.jpeg" class="page" >
+		<img src="pictures/11.jpeg" class="page" >
+		<img src="pictures/12.jpeg" class="page" >
+		<img src="pictures/13.jpeg" class="page" >
+		<img src="pictures/14.jpeg" class="page" >
+		<img src="pictures/15.jpeg" class="page" >
+		<img src="pictures/16.jpeg" class="page" >
+		<img src="pictures/17.jpeg" class="page" >
+		<img src="pictures/18.jpeg" class="page" >
+		<img src="pictures/19.jpeg" class="page" >
+		<img src="pictures/20.jpeg" class="page" >
+		<img src="pictures/21.jpeg" class="page" >
+		<img src="pictures/22.jpeg" class="page" >
+		<img src="pictures/23.jpeg" class="page" >
+		<img src="pictures/24.jpeg" class="page" >
+		<img src="pictures/25.jpeg" class="page" >
+		<img src="pictures/26.jpeg" class="page" >
 	</div>
 </div>
 </body>
