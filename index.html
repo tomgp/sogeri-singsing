@@ -3,31 +3,40 @@
 <head>
 	<title>Sogeri Singsing</title>
 	<style>
-		.outer{
+
+		div.heading{
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		h1, h2{
+			font-family: sans-serif;
+			color: #4B9F87;
+		}
+
+		.content{
+			padding: 100px;
 			display: -webkit-box;
 			display: -moz-box;
 			display: -ms-flexbox;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: flex;
-  
-			-webkit-flex-flow: row wrap;
-			flex-flow: row wrap;
 
-			background: #000;
-			justify-content: stretch;
-		}
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+			
+			-webkit-flex-flow: wrap;
+			flex-flow: wrap;
 
-		.content{
-			margin-left: auto;
-			margin-right: auto;
-			width: 90%;
-			background: #000;
+			background: #FFF;
 		}
 
 		img.page{
-			height: 250px;
+			height: 175px;
+			padding: 10px;
 		}
+
 	</style>
 	<script>
 		function imgLoaded(node){ console.log(node); }
@@ -36,6 +45,10 @@
 <body>
 <div class="outer">
 	<div class="content">
+		<div>
+			<h1>Sogeri Singsing</h1>
+			<h2>July 1987</h2>
+		</div>
 		<img class="page" src="pictures/00a-front-cover.jpeg" onload="imgLoaded(this)">
 		<img src="pictures/00b-front-cover-inside.jpeg" class="page" onload="imgLoaded(this)">
 		<img src="pictures/01.jpeg" alt="" class="page" onload="imgLoaded(this)">
